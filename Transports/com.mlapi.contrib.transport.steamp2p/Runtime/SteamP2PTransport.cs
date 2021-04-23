@@ -438,6 +438,7 @@ namespace MLAPI.Transports.SteamP2P
 
         public override SocketTasks StartServer()
         {
+            serverUser = new User(new CSteamID(SteamUser.GetSteamID().m_SteamID));
             isServer = true;
 
             // setup the callback method
